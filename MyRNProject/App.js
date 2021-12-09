@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { Component } from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -54,6 +54,7 @@ const Section = ({children, title}): Node => {
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
+
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -110,3 +111,15 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
+
+export class   Test  extends Component {
+  
+  componentDidMount() {
+    
+  }
+  componentWillUnmount(){
+    
+  }
+
+}
