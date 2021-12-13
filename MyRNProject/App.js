@@ -92,10 +92,23 @@ const App: () => Node = () => {
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <Text style={styles.baseText}>{"asdfasdf"}</Text>
+
+      <View style={{justifyContent:'center'}}>
+
+          <Text style={{fontSize:40, borderWidth:2}}>{"dfgsdfgsdfgsdfg"}</Text>
+          <Text style={{width:200, fontSize:20, borderWidth:1, justifyContent:'center'}} onPress={this._onPress} > {"汉语测试"} </Text>
+          
+
+      </View>
     </SafeAreaView>
   );
+
+  function _onPress() {
+    console.log('点击文本');
+  };
+  
 };
+
 
 const styles = StyleSheet.create({
   sectionContainer: {
@@ -118,14 +131,17 @@ const styles = StyleSheet.create({
 
 export default App;
 
+// const name='this is a const value';
+// const element=<h1={name}></h1>;
+
 
 export class   Test  extends Component {
-  
+
   componentDidMount() {
-    
+
   }
   componentWillUnmount(){
-    
+
   }
 
 }
