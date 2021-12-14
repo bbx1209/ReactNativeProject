@@ -28,6 +28,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+
 const Section = ({ children, title }): Node => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
@@ -92,6 +93,7 @@ const App: () => Node = () => {
   //   </SafeAreaView>
   // );
   return (
+    
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
 
