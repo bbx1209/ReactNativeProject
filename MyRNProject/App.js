@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import type {Node} from 'react';
+import type { Node } from 'react';
 import {
   Alert,
   Button,
@@ -28,7 +28,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const Section = ({children, title}): Node => {
+const Section = ({ children, title }): Node => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -95,24 +95,24 @@ const App: () => Node = () => {
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
 
-      <View style={{justifyContent:'center'}}>
+      <View style={{ justifyContent: 'center' }}>
 
-          <Text style={{fontSize:40, borderWidth:2}}>{"dfgsdfgsdfgsdfg"}</Text>
-          <Text style={{width:200, fontSize:20, borderWidth:1, justifyContent:'center'}} onPress={()=>{Alert.alert('点击了文字');}} > {"汉语测试"} </Text>
-          <Button title='这是一个按钮' onPress={()=> {
-            Alert.alert('点击了按钮');
-            console.log('点击按钮');
-            }}
-            >
+        <Text style={{ fontSize: 40, borderWidth: 2 }}>{"dfgsdfgsdfgsdfg"}</Text>
+        <Text style={{ width: 200, fontSize: 20, borderWidth: 1, justifyContent: 'center' }} onPress={() => { Alert.alert('点击了文字'); }} > {"汉语测试"} </Text>
+        <Button title='这是一个按钮' onPress={() => {
+          Alert.alert('点击了按钮');
+          console.log('点击按钮');
+        }}
+        >
 
-            </Button>
+        </Button>
 
       </View>
     </SafeAreaView>
   );
 
-  
-  
+
+
 };
 
 
@@ -141,12 +141,12 @@ export default App;
 // const element=<h1={name}></h1>;
 
 
-export class   Test  extends Component {
+export class Test extends Component {
 
   componentDidMount() {
 
   }
-  componentWillUnmount(){
+  componentWillUnmount() {
 
   }
 
