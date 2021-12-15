@@ -28,7 +28,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import { MyComponent, MyComponentII } from './RNJSX/RNJSX';
+import { MyComponent, MyComponentII,MyComponentIII, Counter} from './RNJSX/RNJSX';
 
 
 const App: () => Node = () => {
@@ -38,9 +38,9 @@ const App: () => Node = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  
+
   return (
-    
+
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
 
@@ -59,6 +59,9 @@ const App: () => Node = () => {
         <MyComponentII title="MyComponentII"></MyComponentII>
         <MyComponent/>
 
+        <MyComponentIII title="MyComponentIII" color="rgb(80, 108, 206)"></MyComponentIII>
+        {/*<Counter/>*/}
+
       </View>
     </SafeAreaView>
   );
@@ -68,9 +71,8 @@ const App: () => Node = () => {
 
 
 
+
 export default App;
-
-
 
 export class Test extends Component {
 
