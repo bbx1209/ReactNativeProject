@@ -28,6 +28,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import { MyComponent, MyComponentII } from './RNJSX/RNJSX';
+
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -47,12 +49,15 @@ const App: () => Node = () => {
         <Text style={{ fontSize: 40, borderWidth: 2 }}>{"dfgsdfgsdfgsdfg"}</Text>
         <Text style={{ width: 200, fontSize: 20, borderWidth: 1, justifyContent: 'center' }} onPress={() => { Alert.alert('点击了文字'); }} > {"汉语测试"} </Text>
         <Button title='这是一个按钮' onPress={() => {
-          Alert.alert('点击了按钮');
+          // Alert.alert('点击了按钮');
           console.log('点击按钮');
         }}
         >
 
         </Button>
+
+        <MyComponentII title="MyComponentII"></MyComponentII>
+        <MyComponent/>
 
       </View>
     </SafeAreaView>
