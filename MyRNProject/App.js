@@ -6,95 +6,102 @@
  * @flow strict-local
  */
 
-import React, { Component, useState } from 'react';
-import type { Node } from 'react';
+import React, {Component, useState} from 'react';
+import type {Node} from 'react';
 import {
-  Alert,
-  Button,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
+    Alert,
+    Button,
+    SafeAreaView,
+    ScrollView,
+    StatusBar,
+    StyleSheet,
+    Text,
+    useColorScheme,
+    View,
 } from 'react-native';
 
 import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
+    Colors,
+    DebugInstructions,
+    Header,
+    LearnMoreLinks,
+    ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import { MyComponent, MyComponentII,MyComponentIII, Counter} from './rnjs/RNJSX';
-import {MyCustomButton, Card, CardII} from "./rnjs/rnevent";
-
-
+import {MyComponent, MyComponentII, MyComponentIII, Counter} from './rnjs/RNJSX';
+import {MyCustomButton, Card, CardII, Card3} from "./rnjs/rnevent";
 
 
 const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+    const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-  const [count, setCount] = useState(0)
+    const backgroundStyle = {
+        backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    };
+    const [count, setCount] = useState(0)
 
-  return (
+    return (
 
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+        <SafeAreaView style={backgroundStyle}>
+            <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'}/>
 
-      <View style={{ justifyContent: 'center' }}>
+            <View style={{justifyContent: 'center'}}>
 
-        <Text style={{ fontSize: 40, borderWidth: 2 }}>{"dfgsdfgsdfgsdfg"}</Text>
-        <Text style={{ width: 200, fontSize: 20, borderWidth: 1, justifyContent: 'center' }} onPress={() => { Alert.alert('点击了文字'); }} > {"汉语测试"} </Text>
-        <Button title='这是一个按钮' onPress={() => {
-          // Alert.alert('点击了按钮');
-          console.log('点击按钮');
-        }}
-        >
+                <ScrollView>
 
-        </Button>
+                    <Text style={{fontSize: 40, borderWidth: 2}}>{"dfgsdfgsdfgsdfg"}</Text>
+                    <Text style={{width: 200, fontSize: 20, borderWidth: 1, justifyContent: 'center'}} onPress={() => {
+                        Alert.alert('点击了文字');
+                    }}> {"汉语测试"} </Text>
+                    <Button title='这是一个按钮' onPress={() => {
+                        // Alert.alert('点击了按钮');
+                        console.log('点击按钮');
+                    }}
+                    >
 
-        <MyComponentII title="MyComponentII"/>
-        <MyComponent/>
+                    </Button>
 
-        <MyComponentIII title="MyComponentIII" color="rgb(80, 108, 206)"/>
-        {/*<Counter/>*/}
+                    <MyComponentII title="MyComponentII"/>
+                    <MyComponent/>
 
-        <MyCustomButton  title={` on click:  ${count}`} onIncrement={()=> setCount(count + 1)}/>
+                    <MyComponentIII title="MyComponentIII" color="rgb(80, 108, 206)"/>
+                    {/*<Counter/>*/}
 
-        <Card title="title" showButton={false} color={'#FF5500'}/>
-        <View height={20} color={'#FFFF00'}/>
-        <Card title="title with button" showButton={true}/>
+                    <MyCustomButton title={` on click:  ${count}`} onIncrement={() => setCount(count + 1)}/>
 
-        <View>
-          <CardII title={'title'}/>
-          <CardII title={'title2'} buttonTitle={'Press me'}/>
-        </View>
+                    <Card title="title" showButton={false} color={'#FF5500'}/>
+                    <View height={20} color={'#FFFF00'}/>
+                    <Card title="title with button" showButton={true}/>
 
-      </View>
-    </SafeAreaView>
-  );
+                    <View>
+                        <CardII title={'title'}/>
+                        <CardII title={'title2'} buttonTitle={'Press me'}/>
+                    </View>
+
+
+                    <View>
+                        <Card3 error={true}/>
+                        <Card3 loading={true}/>
+                        <Card3 loading={false} title='Title'/>
+                    </View>
+                </ScrollView>
+            </View>
+        </SafeAreaView>
+    );
 
 };
-
-
-
 
 
 export default App;
 
 export class Test extends Component {
 
-  componentDidMount() {
+    componentDidMount() {
 
-  }
-  componentWillUnmount() {
+    }
 
-  }
+    componentWillUnmount() {
+
+    }
 
 }
