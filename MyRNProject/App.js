@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import type { Node } from 'react';
 import {
   Alert,
@@ -28,7 +28,10 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import { MyComponent, MyComponentII,MyComponentIII, Counter} from './RNJSX/RNJSX';
+import { MyComponent, MyComponentII,MyComponentIII, Counter} from './rnjs/RNJSX';
+import {MyCustomButton} from "./rnjs/rnevent";
+
+
 
 
 const App: () => Node = () => {
@@ -37,7 +40,7 @@ const App: () => Node = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-
+  const [count, setCount] = useState(0)
 
   return (
 
@@ -56,11 +59,13 @@ const App: () => Node = () => {
 
         </Button>
 
-        <MyComponentII title="MyComponentII"></MyComponentII>
+        <MyComponentII title="MyComponentII"/>
         <MyComponent/>
 
-        <MyComponentIII title="MyComponentIII" color="rgb(80, 108, 206)"></MyComponentIII>
+        <MyComponentIII title="MyComponentIII" color="rgb(80, 108, 206)"/>
         {/*<Counter/>*/}
+
+        <MyCustomButton  title={` on click:  ${count}`} onIncrement={()=> setCount(count + 1)}/>
 
       </View>
     </SafeAreaView>
