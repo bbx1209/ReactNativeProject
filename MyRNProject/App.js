@@ -29,7 +29,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import {MyComponent, MyComponentII, MyComponentIII, Counter} from './rnjs/RNJSX';
-import {MyCustomButton, Card, CardII, Card3} from "./rnjs/rnevent";
+import {MyCustomButton, Card, CardII, Card3, MyInputView} from "./rnjs/rnevent";
 
 
 const App: () => Node = () => {
@@ -84,6 +84,12 @@ const App: () => Node = () => {
                         <Card3 loading={true}/>
                         <Card3 loading={false} title='Title'/>
                     </View>
+
+                    <View>
+                        <MyInputView/>
+                    </View>
+
+
                 </ScrollView>
             </View>
         </SafeAreaView>

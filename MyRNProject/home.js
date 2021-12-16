@@ -1,16 +1,9 @@
-import { Component } from "react";
+import {Component} from "react";
 
 export class NewRoute extends Component {
 
-    state = {
-        x = 0,
-        y = 0
-    };
+    componentWillMount() {
 
-    
-
-    componentWillMount {
-
-}
+    }
 
 }
