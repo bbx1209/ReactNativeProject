@@ -29,7 +29,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import { MyComponent, MyComponentII,MyComponentIII, Counter} from './rnjs/RNJSX';
-import {MyCustomButton} from "./rnjs/rnevent";
+import {MyCustomButton, Card, CardII} from "./rnjs/rnevent";
 
 
 
@@ -66,6 +66,15 @@ const App: () => Node = () => {
         {/*<Counter/>*/}
 
         <MyCustomButton  title={` on click:  ${count}`} onIncrement={()=> setCount(count + 1)}/>
+
+        <Card title="title" showButton={false} color={'#FF5500'}/>
+        <View height={20} color={'#FFFF00'}/>
+        <Card title="title with button" showButton={true}/>
+
+        <View>
+          <CardII title={'title'}/>
+          <CardII title={'title2'} buttonTitle={'Press me'}/>
+        </View>
 
       </View>
     </SafeAreaView>

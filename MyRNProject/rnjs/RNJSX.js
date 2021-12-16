@@ -6,7 +6,7 @@ import { render } from "react-native/Libraries/Renderer/implementations/ReactNat
 export function MyComponent() {
     return (
         <View>
-            <Button title="button" color="#FF5500"></Button>
+            <Button title="button" color="#FF5500"/>
         </View>
     )
 }
@@ -18,7 +18,7 @@ export function MyComponentII({ title }) {
             <Button title={title} color="#1ACDA5" onPress={() => {
                 // Alert.alert("button")
                 console.warn("======" + "button")
-            }}></Button>
+            }}/>
 
         </View>
     )
@@ -32,7 +32,7 @@ interface  Props {
 
 export function MyComponentIII({ title, color='#1ACDA5' }:Props) {
     return <View>
-        <Button title={title} color={color}></Button>
+        <Button title={title} color={color}/>
     </View>
 }
 
