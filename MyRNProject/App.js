@@ -30,7 +30,7 @@ import {
 
 import {MyComponent, MyComponentII, MyComponentIII, Counter} from './rnjs/RNJSX';
 import {MyCustomButton, Card, CardII, Card3, MyInputView, MemoTest, UseStateTest} from "./rnjs/rnevent";
-import {UseEffect, UseEffect2, UseRef, UseRender} from "./rnjs/hooks";
+import {CustomHook, UseEffect, UseEffect2, UseRef, UseRender} from "./rnjs/hooks";
 
 
 const App: () => Node = () => {
@@ -96,6 +96,7 @@ const App: () => Node = () => {
                     <UseEffect/>
                     <UseEffect2/>
                     <UseRef/>
+                    <CustomHook/>
 
                 </ScrollView>
             </View>

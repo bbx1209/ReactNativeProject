@@ -80,12 +80,40 @@ export function UseRef() {
     }, [])
 
     return <View>
-        <Text style={{fontSize: 120}}>{count}</Text>
+        <Text style={{fontSize: 50}}>{count}</Text>
         <Button title='stop' onPress={() => {
             clearInterval(intervalRef.current)
-        }}></Button>
+        }}/>
 
     </View>
+}
+
+function useInterval(callback, delay) {
+    const savedCallBack = useRef()
+
+
+    useEffect(() => {
+        savedCallBack.current = callback
+    }, [callback])
+
+
+    useEffect(() => {
+        if (delay != null) {
+            let id = setInterval(() => {
+                savedCallBack.current()
+            }, delay)
+            return () => clearInterval(id)
+        }
+    }, [delay])
+
+}
+
+export function CustomHook() {
+    const [count, setCount] = useState(0)
+    useInterval(() => {
+        setCount(count + 1)
+    }, 1000)
+    return <Text style={{fontSize: 50}}> {count}</Text>
 }
 
 
