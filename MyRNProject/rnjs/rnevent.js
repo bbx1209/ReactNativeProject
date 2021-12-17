@@ -1,5 +1,5 @@
-import {Button, View, Text,TextInput} from "react-native";
-import React,{useState, memo} from "react";
+import {Button, View, Text, TextInput} from "react-native";
+import React, {useState, memo} from "react";
 
 export function MyCustomButton({title, onIncrement}) {
     return <Button title={title} onPress={onIncrement}/>
@@ -30,7 +30,7 @@ export const Card3 = ({loading, error, title}) => {
     } else {
         content = (
             <View>
-                <Text style={{fontSize:20}}>{title}</Text>
+                <Text style={{fontSize: 20}}>{title}</Text>
             </View>
         )
     }
@@ -40,33 +40,34 @@ export const Card3 = ({loading, error, title}) => {
 
 //MARK: input
 
- export const MyInputView= () => {
+export const MyInputView = () => {
     const [text, setText] = useState('')
 
     return <View>
         <TextInput
-         value={text}
-         style={{fontSize:20 ,color: 'steelblue'}}
-         placeholder='Type here..'
-         onChangeText={(text)=>{
-             setText(text)
-         }}
+            value={text}
+            style={{fontSize: 20, color: 'steelblue'}}
+            placeholder='Type here..'
+            onChangeText={(text) => {
+                setText(text)
+            }}
         >
         </TextInput>
 
-        <Text style={{fontSize:24}}>{'\n'} you entered:{text}</Text>
+        <Text style={{fontSize: 24}}>{'\n'} you entered:{text}</Text>
     </View>
- }
+}
 
- // Mark: Memo
+// Mark: Memo
 
-export function  Label({title}) {
+export function Label({title}) {
     console.log(`rerender : ${title}`)
     return <Text>{title}</Text>
 }
-export  const  LabelMemo = memo(Label)
 
-export  function MemoTest({title}) {
+export const LabelMemo = memo(Label)
+
+export function MemoTest({title}) {
     const [count, setCount] = useState(0)
     return <View>
         <Button
@@ -75,8 +76,31 @@ export  function MemoTest({title}) {
                 setCount(count + 1)
             }}
         />
-        <LabelMemo title="Label with memo" />
-        <Label title="Label" />
+        <LabelMemo title="Label with memo"/>
+        <Label title="Label"/>
+    </View>
+}
+
+
+// MARK: UseState
+
+const randomDiceRoll = () => Math.floor(Math.random() * 6) + 1
+
+export function UseStateTest() {
+    const [diceRolls, setDiceRolls] = useState([])
+
+    return <View>
+        <Button
+            title="Roll dice"
+            onPress={() => {
+                console.log('+++ press on roll dice')
+                setDiceRolls([...diceRolls, randomDiceRoll()])
+            }
+            }
+        />
+        {diceRolls.map((diceRoll, index) => (
+            <Text style={{fontSize: 24 , color: '#FF5500'}} key ={index}>{diceRoll}</Text>
+        ))}
     </View>
 }
 
