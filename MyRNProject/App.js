@@ -29,7 +29,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import {MyComponent, MyComponentII, MyComponentIII, Counter} from './rnjs/RNJSX';
-import {MyCustomButton, Card, CardII, Card3, MyInputView} from "./rnjs/rnevent";
+import {MyCustomButton, Card, CardII, Card3, MyInputView, MemoTest} from "./rnjs/rnevent";
 
 
 const App: () => Node = () => {
@@ -88,6 +88,8 @@ const App: () => Node = () => {
                     <View>
                         <MyInputView/>
                     </View>
+
+                    <MemoTest/>
 
 
                 </ScrollView>

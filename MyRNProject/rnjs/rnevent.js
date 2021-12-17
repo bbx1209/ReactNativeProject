@@ -1,5 +1,5 @@
 import {Button, View, Text,TextInput} from "react-native";
-import React,{useState} from "react";
+import React,{useState, memo} from "react";
 
 export function MyCustomButton({title, onIncrement}) {
     return <Button title={title} onPress={onIncrement}/>
@@ -57,6 +57,30 @@ export const Card3 = ({loading, error, title}) => {
         <Text style={{fontSize:24}}>{'\n'} you entered:{text}</Text>
     </View>
  }
+
+ // Mark: Memo
+
+export function  Label({title}) {
+    console.log(`rerender : ${title}`)
+    return <Text>{title}</Text>
+}
+export  const  LabelMemo = memo(Label)
+
+export  function MemoTest({title}) {
+    const [count, setCount] = useState(0)
+    return <View>
+        <Button
+            title={`Pressed ${count} times`}
+            onPress={() => {
+                setCount(count + 1)
+            }}
+        />
+        <LabelMemo title="Label with memo" />
+        <Label title="Label" />
+    </View>
+}
+
+
 
 
 
