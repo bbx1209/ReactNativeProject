@@ -110,10 +110,16 @@ function useInterval(callback, delay) {
 
 export function CustomHook() {
     const [count, setCount] = useState(0)
+    var delay = 1000;
     useInterval(() => {
         setCount(count + 1)
-    }, 1000)
-    return <Text style={{fontSize: 50}}> {count}</Text>
+    }, delay)
+    return <View >
+        <Text style={{fontSize: 50}}> {count}</Text>
+        <Button title='Stop Custom' onPress={()=>{
+            delay = null
+        }}/>
+    </View>
 }
 
 

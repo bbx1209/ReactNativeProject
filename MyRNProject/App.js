@@ -20,6 +20,11 @@ import {
     View,
 } from 'react-native';
 
+
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+
 import {
     Colors,
     DebugInstructions,
@@ -31,7 +36,13 @@ import {
 import {MyComponent, MyComponentII, MyComponentIII, Counter} from './rnjs/RNJSX';
 import {MyCustomButton, Card, CardII, Card3, MyInputView, MemoTest, UseStateTest} from "./rnjs/rnevent";
 import {CustomHook, UseEffect, UseEffect2, UseRef, UseRender} from "./rnjs/hooks";
+import {HomeScreen} from "./components/homeScreen";
 
+import {Screen1, Screen11,Screen2} from "./screens/homelist"
+
+
+
+const Stack = createNativeStackNavigator();
 
 const App: () => Node = () => {
     const isDarkMode = useColorScheme() === 'dark';
@@ -39,68 +50,22 @@ const App: () => Node = () => {
     const backgroundStyle = {
         backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
     };
-    const [count, setCount] = useState(0)
+
 
     return (
+        // <SafeAreaView style={backgroundStyle}>
+        //     <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'}/>
+            <NavigationContainer>
+                <Stack.Navigator>
+                    {/*<Stack.Screen name="Home" component={HomeScreen}/>*/}
 
-        <SafeAreaView style={backgroundStyle}>
-            <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'}/>
+                    <Stack.Screen  name="Screen1" component={Screen1}/>
+                    <Stack.Screen  name="Screen11" component={Screen11}/>
+                    <Stack.Screen  name="Screen2" component={Screen2}/>
+                </Stack.Navigator>
+            </NavigationContainer>
+        // </SafeAreaView>
 
-            <View style={{justifyContent: 'center'}}>
-
-                <ScrollView>
-
-                    <Text style={{fontSize: 40, borderWidth: 2}}>{"dfgsdfgsdfgsdfg"}</Text>
-                    <Text style={{width: 200, fontSize: 20, borderWidth: 1, justifyContent: 'center'}} onPress={() => {
-                        Alert.alert('点击了文字');
-                    }}> {"汉语测试"} </Text>
-                    <Button title='这是一个按钮' onPress={() => {
-                        // Alert.alert('点击了按钮');
-                        console.log('点击按钮');
-                    }}
-                    >
-
-                    </Button>
-
-                    <MyComponentII title="MyComponentII"/>
-                    <MyComponent/>
-
-                    <MyComponentIII title="MyComponentIII" color="rgb(80, 108, 206)"/>
-                    {/*<Counter/>*/}
-
-                    <MyCustomButton title={` on click:  ${count}`} onIncrement={() => setCount(count + 1)}/>
-
-                    <Card title="title" showButton={false} color={'#FF5500'}/>
-                    <View height={20} color={'#FFFF00'}/>
-                    <Card title="title with button" showButton={true}/>
-
-                    <View>
-                        <CardII title={'title'}/>
-                        <CardII title={'title2'} buttonTitle={'Press me'}/>
-                    </View>
-
-
-                    <View>
-                        <Card3 error={true}/>
-                        <Card3 loading={true}/>
-                        <Card3 loading={false} title='Title'/>
-                    </View>
-
-                    <View>
-                        <MyInputView/>
-                    </View>
-
-                    <MemoTest/>
-                    <UseStateTest/>
-                    <UseRender/>
-                    <UseEffect/>
-                    <UseEffect2/>
-                    <UseRef/>
-                    <CustomHook/>
-
-                </ScrollView>
-            </View>
-        </SafeAreaView>
     );
 
 };
