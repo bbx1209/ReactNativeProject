@@ -1,4 +1,4 @@
-import {Button, View, Text, TextInput} from "react-native";
+import {Button, View, Text, TextInput, StyleSheet} from "react-native";
 import React, {useState, memo} from "react";
 
 export function MyCustomButton({title, onIncrement}) {
@@ -104,6 +104,12 @@ export function UseStateTest() {
     </View>
 }
 
+
+const  styles = StyleSheet.create ({
+    box:{
+
+    }
+})
 
 
 

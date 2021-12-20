@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import {View, Button, Text, StyleSheet} from 'react-native'
 import {Toggle} from "../components/Toggle";
-import _toPrimitive from "@babel/runtime/helpers/esm/toPrimitive";
 
 
 export const LayoutScreen = ((route) => {
