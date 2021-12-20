@@ -10,6 +10,10 @@ export const Screen1 = ({navigation}) => {
         <Button title='push to new screen2' onPress={() => {
             navigation.push('Screen2', {title: "hello! 2"})
         }}></Button>
+
+        <Button title='LayoutScreen' onPress={()=>{
+            navigation.push('LayoutScreen')
+        }}/>
     </View>
 }
 

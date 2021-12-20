@@ -39,6 +39,7 @@ import {CustomHook, UseEffect, UseEffect2, UseRef, UseRender} from "./rnjs/hooks
 import {HomeScreen} from "./components/homeScreen";
 
 import {Screen1, Screen11,Screen2} from "./screens/homelist"
+import {LayoutScreen} from "./screens/layout"
 
 
 
@@ -58,10 +59,10 @@ const App: () => Node = () => {
             <NavigationContainer>
                 <Stack.Navigator>
                     {/*<Stack.Screen name="Home" component={HomeScreen}/>*/}
-
                     <Stack.Screen  name="Screen1" component={Screen1}/>
                     <Stack.Screen  name="Screen11" component={Screen11}/>
                     <Stack.Screen  name="Screen2" component={Screen2}/>
+                    <Stack.Screen name='LayoutScreen' component={LayoutScreen}/>
                 </Stack.Navigator>
             </NavigationContainer>
         // </SafeAreaView>
