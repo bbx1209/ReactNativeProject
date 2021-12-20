@@ -9,8 +9,6 @@ export const HomeScreen = ((route) => {
     const [count, setCount] = useState(0)
     return (
         <View style={styles.box}>
-            <View style={{justifyContent: 'center'}}>
-
                 <ScrollView>
                     <Text style={{fontSize: 40, borderWidth: 2}}>{"dfgsdfgsdfgsdfg"}</Text>
                     <Text style={{width: 200, fontSize: 20, borderWidth: 1, justifyContent: 'center'}}
@@ -60,9 +58,7 @@ export const HomeScreen = ((route) => {
                     <UseEffect2/>
                     <UseRef/>
                     <CustomHook/>
-
                 </ScrollView>
-            </View>
         </View>
     )
 })
@@ -78,9 +74,7 @@ export  const  HomeScreen2 = ((route)=>{
 const styles = StyleSheet.create({
     box: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        margin: 0,
+        margin: 15
     }
 })
 
