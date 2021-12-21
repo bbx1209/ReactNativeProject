@@ -34,7 +34,7 @@ RCT_EXPORT_METHOD(nativeDoSth:(NSString *)sth item:(NSString *)item) {
   NSLog(@"==== %@ %@", sth, item);
 }
 
-RCT_EXPORT_METHOD(query:(NSString *)url callback:(RCTResponseSenderBlock)callback) {
+RCT_EXPORT_METHOD(queryCallback:(NSString *)url callback:(RCTResponseSenderBlock)callback) {
   NSLog(@"==== %@ ", url);
   if (callback) {
     callback(@[[NSNull null], @"result"]);
@@ -50,7 +50,7 @@ RCT_EXPORT_METHOD(query:(NSString *)url resolver:(RCTPromiseResolveBlock)resolve
       reject(@"error code", @"error msg", [NSError errorWithDomain:@"domain" code:300 userInfo:nil]);
     }
   }
- 
+
 }
 - (dispatch_queue_t)methodQueue {
   return dispatch_queue_create("DISPATCH_QUEUE_SERIAL", DISPATCH_QUEUE_SERIAL);

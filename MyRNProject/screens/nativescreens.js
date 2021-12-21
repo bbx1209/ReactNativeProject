@@ -29,7 +29,7 @@ export class NativeContainer extends Component {
                    MCRNStorage.nativeDoSth('first param','second param')
                 }}/>
                 <Button  title='method with callback' onPress={()=> {
-                    MCRNStorage.query('first param',(error, result)=>{
+                    MCRNStorage.queryCallback('first param',(error, result)=>{
                         if (error) {
                             console.error(error)
                         } else {
