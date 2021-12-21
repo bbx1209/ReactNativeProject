@@ -52,5 +52,8 @@ RCT_EXPORT_METHOD(query:(NSString *)url resolver:(RCTPromiseResolveBlock)resolve
   }
  
 }
+- (dispatch_queue_t)methodQueue {
+  return dispatch_queue_create("DISPATCH_QUEUE_SERIAL", DISPATCH_QUEUE_SERIAL);
+}
 
 @end
