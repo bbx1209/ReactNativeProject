@@ -13,6 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		741148C2E63356FD00D9CED3 /* libPods-MyRNProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2F63DA27E675C15A7DB4FD /* libPods-MyRNProject.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8299230C277160D70084BE1A /* MCRNStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8299230B277160D70084BE1A /* MCRNStorage.m */; };
 		A4B20803E85970B5547D9F98 /* libPods-MyRNProject-MyRNProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ED6E5B33193BCBB57B1B21 /* libPods-MyRNProject-MyRNProjectTests.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MyRNProject/main.m; sourceTree = "<group>"; };
 		6C2F63DA27E675C15A7DB4FD /* libPods-MyRNProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyRNProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MyRNProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8299230A277160D70084BE1A /* MCRNStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCRNStorage.h; sourceTree = "<group>"; };
+		8299230B277160D70084BE1A /* MCRNStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCRNStorage.m; sourceTree = "<group>"; };
 		CC992CC0E5E7C3D91446402A /* Pods-MyRNProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNProject.release.xcconfig"; path = "Target Support Files/Pods-MyRNProject/Pods-MyRNProject.release.xcconfig"; sourceTree = "<group>"; };
 		D9ED6E5B33193BCBB57B1B21 /* libPods-MyRNProject-MyRNProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyRNProject-MyRNProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85E90DFC245B517ADEED1A2 /* Pods-MyRNProject-MyRNProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNProject-MyRNProjectTests.release.xcconfig"; path = "Target Support Files/Pods-MyRNProject-MyRNProjectTests/Pods-MyRNProject-MyRNProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				8299230A277160D70084BE1A /* MCRNStorage.h */,
+				8299230B277160D70084BE1A /* MCRNStorage.m */,
 			);
 			name = MyRNProject;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				8299230C277160D70084BE1A /* MCRNStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

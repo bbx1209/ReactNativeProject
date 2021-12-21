@@ -40,6 +40,7 @@ import {HomeScreen,HomeScreen2} from "./components/homeScreen";
 
 import {Screen1, Screen11,Screen2} from "./screens/homelist"
 import {LayoutScreen} from "./screens/layout"
+import {NativeContainer} from "./screens/nativescreens";
 
 
 
@@ -64,6 +65,7 @@ const App: () => Node = () => {
                     <Stack.Screen name='LayoutScreen' component={LayoutScreen}/>
                     <Stack.Screen name="HomeScreen" component={HomeScreen}/>
                     <Stack.Screen name="HomeScreen2" component={HomeScreen2}/>
+                    <Stack.Screen name='NativeContainer' component={NativeContainer}/>
                 </Stack.Navigator>
             </NavigationContainer>
         // </SafeAreaView>

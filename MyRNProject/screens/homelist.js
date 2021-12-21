@@ -1,9 +1,9 @@
 import React from 'react'
-import {View, Button, Text} from 'react-native'
+import {View, Button, Text, ScrollView} from 'react-native'
 import {useNavigation, useRoute} from'@react-navigation/native'
 
 export const Screen1 = ({navigation}) => {
-    return <View>
+    return <ScrollView>
         <Button title='push to new screen' onPress={() => {
             navigation.push('Screen11', {title: "hello!"})
         }}/>
@@ -20,7 +20,11 @@ export const Screen1 = ({navigation}) => {
         <Button title='Home2' onPress={()=>{
             navigation.push('HomeScreen2')
         }}/>
-    </View>
+        <Button title='NativeContainer' onPress={()=>{
+            navigation.push('NativeContainer')
+        }}/>
+
+    </ScrollView>
 }
 
 export const Screen11 = ({route}) => {

@@ -20,15 +20,11 @@ export const HomeScreen = ((route) => {
                         console.log('点击按钮');
                     }}
                     >
-
                     </Button>
-
                     <MyComponentII title="MyComponentII"/>
                     <MyComponent/>
-
                     <MyComponentIII title="MyComponentIII" color="rgb(80, 108, 206)"/>
                     {/*<Counter/>*/}
-
                     <MyCustomButton title={` on click:  ${count}`} onIncrement={() => setCount(count + 1)}/>
 
                     <Card title="title" showButton={false} color={'#FF5500'}/>
@@ -39,7 +35,6 @@ export const HomeScreen = ((route) => {
                         <CardII title={'title'}/>
                         <CardII title={'title2'} buttonTitle={'Press me'}/>
                     </View>
-
 
                     <View>
                         <Card3 error={true}/>
@@ -52,12 +47,19 @@ export const HomeScreen = ((route) => {
                     </View>
 
                     <MemoTest/>
+
                     <UseStateTest/>
+
                     <UseRender/>
+
                     <UseEffect/>
+
                     <UseEffect2/>
+
                     <UseRef/>
+
                     <CustomHook/>
+
                 </ScrollView>
         </View>
     )
