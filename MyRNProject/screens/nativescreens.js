@@ -29,6 +29,9 @@ export class NativeContainer extends Component {
                         }
                     })
                 }}/>
+                <Button  title='method with promise callback' onPress={()=> {
+                    MCRNStorage.query('promise param').then(value => console.log(value))
+                }}/>
 
             </View>
         )

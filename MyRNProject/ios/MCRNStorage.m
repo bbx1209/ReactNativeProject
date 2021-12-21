@@ -41,4 +41,16 @@ RCT_EXPORT_METHOD(query:(NSString *)url callback:(RCTResponseSenderBlock)callbac
   }
 }
 
+RCT_EXPORT_METHOD(query:(NSString *)url resolver:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject) {
+  NSLog(@"==== %@ ", url);
+  if (resolve) {
+    resolve(url);
+  }else {
+    if (reject) {
+      reject(@"error code", @"error msg", [NSError errorWithDomain:@"domain" code:300 userInfo:nil]);
+    }
+  }
+ 
+}
+
 @end
