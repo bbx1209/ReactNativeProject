@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import {View, Text, Button, NativeModules, NativeEventEmitter} from 'react-native'
+import RCTDeviceEventEmitter from "react-native/Libraries/EventEmitter/RCTDeviceEventEmitter";
+import type {EventSubscription} from "react-native/Libraries/vendor/emitter/EventSubscription";
 
 
 const {MCRNStorage, MCRNEventEmitter}  = NativeModules;
@@ -7,9 +9,16 @@ const {MCRNStorage, MCRNEventEmitter}  = NativeModules;
 const  emitter = new NativeEventEmitter(MCRNEventEmitter);
 
 
-
-
 export class NativeContainer extends Component {
+
+    componentDidMount() {
+         RCTDeviceEventEmitter.addListener('MCRNEventEmitter',(value)=>{
+            console.log('rn 接收到了'+ value);
+        });
+    }
+    componentWillUnmount() {
+        RCTDeviceEventEmitter.removeAllListeners();
+    }
 
     render() {
         emitter.addListener('componentDidAppear',function (data) {
@@ -18,7 +27,7 @@ export class NativeContainer extends Component {
         return (
             <View>
                 <Button  title='Native do ' onPress={()=> {
-                    MCRNStorage.nativeDoSth()
+                    MCRNStorage.nativeDoSthNoParam()
                 }}/>
                 <Button  title='receive const ' onPress={()=> {
                     let const1 = MCRNStorage.Const1
@@ -42,6 +51,7 @@ export class NativeContainer extends Component {
                 }}/>
 
                 <Button  title='send event' onPress={()=> {
+                    console.log('begin to send event ')
                     MCRNEventEmitter.sendMCEvent('press send event button')
                 }}/>
 

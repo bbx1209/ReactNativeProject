@@ -26,7 +26,7 @@ RCT_EXPORT_MODULE(MCRNStorage);
 }
 
 
-RCT_EXPORT_METHOD(nativeDoSth) {
+RCT_EXPORT_METHOD(nativeDoSthNoParam) {
   NSLog(@"ios native do something");
 }
 

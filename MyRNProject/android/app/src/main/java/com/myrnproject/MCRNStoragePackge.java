@@ -21,6 +21,7 @@ public class MCRNStoragePackge implements ReactPackage {
         List<NativeModule> list = new ArrayList<>();
         //将原生模块实例化,放入数组
         list.add(new MCRNStorageModule(reactContext));
+        list.add(new MCReactJavaEventEmitterModule(reactContext, reactContext));
         return list;
     }
 
