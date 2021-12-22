@@ -6,107 +6,85 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {Component, useState} from 'react';
 import type {Node} from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
+    Alert,
+    Button,
+    SafeAreaView,
+    ScrollView,
+    StatusBar,
+    StyleSheet,
+    Text,
+    useColorScheme,
+    View,
 } from 'react-native';
 
+
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+
 import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
+    Colors,
+    DebugInstructions,
+    Header,
+    LearnMoreLinks,
+    ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+import {MyComponent, MyComponentII, MyComponentIII, Counter} from './rnjs/RNJSX';
+import {MyCustomButton, Card, CardII, Card3, MyInputView, MemoTest, UseStateTest} from "./rnjs/rnevent";
+import {CustomHook, UseEffect, UseEffect2, UseRef, UseRender} from "./rnjs/hooks";
+import {HomeScreen,HomeScreen2} from "./components/homeScreen";
+
+import {Screen1, Screen11,Screen2} from "./screens/homelist"
+import {LayoutScreen} from "./screens/layout"
+import {NativeContainer} from "./screens/nativescreens";
+
+
+
+const Stack = createNativeStackNavigator();
 
 const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+    const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+    const backgroundStyle = {
+        backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    };
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+
+    return (
+        // <SafeAreaView style={backgroundStyle}>
+        //     <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'}/>
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen  name="Screen1" component={Screen1}/>
+                    <Stack.Screen  name="Screen11" component={Screen11}/>
+                    <Stack.Screen  name="Screen2" component={Screen2}/>
+                    <Stack.Screen name='LayoutScreen' component={LayoutScreen}/>
+                    <Stack.Screen name="HomeScreen" component={HomeScreen}/>
+                    <Stack.Screen name="HomeScreen2" component={HomeScreen2}/>
+                    <Stack.Screen name='NativeContainer' component={NativeContainer}/>
+                </Stack.Navigator>
+            </NavigationContainer>
+        // </SafeAreaView>
+
+    );
+
 };
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
+
+export class Test extends Component {
+
+    componentDidMount() {
+
+    }
+
+    componentWillUnmount() {
+
+    }
+
+}
