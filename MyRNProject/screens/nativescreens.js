@@ -1,29 +1,36 @@
 import React, {Component} from 'react'
-import {View, Text, Button, NativeModules, NativeEventEmitter} from 'react-native'
+import {View, Text, Button, NativeModules, NativeEventEmitter, Platform} from 'react-native'
 import RCTDeviceEventEmitter from "react-native/Libraries/EventEmitter/RCTDeviceEventEmitter";
 import type {EventSubscription} from "react-native/Libraries/vendor/emitter/EventSubscription";
 
 
 const {MCRNStorage, MCRNEventEmitter}  = NativeModules;
 
-const  emitter = new NativeEventEmitter(MCRNEventEmitter);
+if (Platform.OS !=='android') {
+    const  emitter = new NativeEventEmitter(MCRNEventEmitter);
+    emitter.addListener('componentDidAppear',function (data) {
+        console.log(data)
+    })
+}
 
 
 export class NativeContainer extends Component {
 
     componentDidMount() {
+        if (Platform.OS === 'android') {
          RCTDeviceEventEmitter.addListener('MCRNEventEmitter',(value)=>{
             console.log('rn 接收到了'+ value);
         });
+        }
     }
     componentWillUnmount() {
+        if (Platform.OS === 'android') {
         RCTDeviceEventEmitter.removeAllListeners();
+        }
     }
 
     render() {
-        emitter.addListener('componentDidAppear',function (data) {
-            console.log(data)
-        })
+
         return (
             <View>
                 <Button  title='Native do ' onPress={()=> {
