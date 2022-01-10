@@ -9,7 +9,7 @@ assetsFile=${path}/ios/assets
 echo "${assetsFile}"
 
 if [ -d "$assetsFile" ]; then
-echo "${assetsFile} ###已经存在### "
+#强制删除目录以及下面的文件
 rm -rf "$assetsFile"
 fi
 
