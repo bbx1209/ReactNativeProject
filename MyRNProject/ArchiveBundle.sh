@@ -18,4 +18,4 @@ mkdir  ${assetsFile}
 
 #打包命令
 
-react-native bundle --entry-file index.js --bundle-output ./ios/assets/index.ios.bundle --platform ios --assets-dest ./ios/assets --dev false
+react-native bundle --entry-file index.js --bundle-output ./ios/assets/index.ios.jsbundle --platform ios --assets-dest ./ios/assets --dev false
