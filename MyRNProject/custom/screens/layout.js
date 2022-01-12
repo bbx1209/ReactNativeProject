@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {View, Button, Text, StyleSheet} from 'react-native'
+import {View, Button, Text, StyleSheet, SafeAreaView} from 'react-native'
 import {Toggle} from "../components/Toggle";
 
 
@@ -13,41 +13,46 @@ export const LayoutScreen = ((route) => {
     const primaryAxis = flexDirection === 'row' ? 'Horizontal' : ' Vertical'
     const secondaryAxis = flexDirection === 'row' ? 'Vertical' : 'Horizontal'
 
-    return <View>
-        <Toggle
-            label={'primary axis (flexDirection}'}
-            value={flexDirection}
-            options={flexDirectionOptions}
-            onChange={(option) => {
-                setFlexDirection(option)
-            }}
-        />
+    return (
+            <View style={styles.container}>
+                <Toggle
+                    label={'primary axis (flexDirection}'}
+                    value={flexDirection}
+                    options={flexDirectionOptions}
+                    onChange={(option) => {
+                        setFlexDirection(option)
+                    }}
+                />
 
-        <Toggle
-            label={`${primaryAxis} distribution (justifycontent)`}
-            value={justifyContent}
-            options={justifyContentOptions}
-            onChange={(option) => {
-                setJustifyContent(option)
-            }}
-        />
+                <Toggle
+                    label={`${primaryAxis} distribution (justifycontent)`}
+                    value={justifyContent}
+                    options={justifyContentOptions}
+                    onChange={(option) => {
+                        setJustifyContent(option)
+                    }}
+                />
 
-        <Toggle
-            label={`${secondaryAxis}  alignment(alignItems)`}
-            value={alignItems}
-            options={alignItemsOptions}
-            onChange={(option) => {
-                setAlignItems(option)
-            }}
-        />
+                <Toggle
+                    label={`${secondaryAxis}  alignment(alignItems)`}
+                    value={alignItems}
+                    options={alignItemsOptions}
+                    onChange={(option) => {
+                        setAlignItems(option)
+                    }}
+                />
 
-        <View style={[styles.layout, layoutStyle]}>
-            <View style={styles.box}/>
-            <View style={styles.box}/>
-            <View style={styles.box}/>
-        </View>
+                <View style={[styles.layout, layoutStyle]}>
+                    <View style={styles.box}/>
+                    <View style={styles.box}/>
+                    <View style={styles.box}/>
+                </View>
 
-    </View>
+            </View>
+
+    )
+
+
 })
 
 const flexDirectionOptions = ['row', 'column']

@@ -38,7 +38,7 @@ import {MyCustomButton, Card, CardII, Card3, MyInputView, MemoTest, UseStateTest
 import {CustomHook, UseEffect, UseEffect2, UseRef, UseRender} from "./custom/rnjs/hooks";
 import {HomeScreen,HomeScreen2} from "./custom/components/homeScreen";
 
-import {Screen1, Screen11,Screen2} from "./custom/screens/homelist"
+import {HomePage, Screen1, Screen11, Screen2} from "./custom/screens/homelist"
 import {LayoutScreen} from "./custom/screens/layout"
 import {NativeContainer} from "./custom/screens/nativescreens";
 
@@ -59,7 +59,7 @@ const App: () => Node = () => {
         //     <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'}/>
             <NavigationContainer>
                 <Stack.Navigator>
-                    <Stack.Screen  name="Screen1" component={Screen1}/>
+                    <Stack.Screen  name="HomePage" component={Screen1}/>
                     <Stack.Screen  name="Screen11" component={Screen11}/>
                     <Stack.Screen  name="Screen2" component={Screen2}/>
                     <Stack.Screen name='LayoutScreen' component={LayoutScreen}/>
