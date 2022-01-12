@@ -33,14 +33,14 @@ import {
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import {MyComponent, MyComponentII, MyComponentIII, Counter} from './rnjs/RNJSX';
-import {MyCustomButton, Card, CardII, Card3, MyInputView, MemoTest, UseStateTest} from "./rnjs/rnevent";
-import {CustomHook, UseEffect, UseEffect2, UseRef, UseRender} from "./rnjs/hooks";
-import {HomeScreen,HomeScreen2} from "./components/homeScreen";
+import {MyComponent, MyComponentII, MyComponentIII, Counter} from './custom/rnjs/RNJSX';
+import {MyCustomButton, Card, CardII, Card3, MyInputView, MemoTest, UseStateTest} from "./custom/rnjs/rnevent";
+import {CustomHook, UseEffect, UseEffect2, UseRef, UseRender} from "./custom/rnjs/hooks";
+import {HomeScreen,HomeScreen2} from "./custom/components/homeScreen";
 
-import {Screen1, Screen11,Screen2} from "./screens/homelist"
-import {LayoutScreen} from "./screens/layout"
-import {NativeContainer} from "./screens/nativescreens";
+import {Screen1, Screen11,Screen2} from "./custom/screens/homelist"
+import {LayoutScreen} from "./custom/screens/layout"
+import {NativeContainer} from "./custom/screens/nativescreens";
 
 
 

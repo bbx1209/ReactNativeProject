@@ -23,6 +23,9 @@ export const Screen1 = ({navigation}) => {
         <Button title='NativeContainer' onPress={()=>{
             navigation.push('NativeContainer')
         }}/>
+        <Button title='NativeContainer' onPress={()=>{
+            navigation.push('NativeContainer')
+        }}/>
 
     </ScrollView>
 }
