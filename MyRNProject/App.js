@@ -58,9 +58,9 @@ const App: () => Node = () => {
         // <SafeAreaView style={backgroundStyle}>
         //     <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'}/>
             <NavigationContainer>
-                <Stack.Navigator>
-                    <Stack.Screen  name="HomePage" component={Screen1}/>
-                    <Stack.Screen  name="Screen11" component={Screen11}/>
+                <Stack.Navigator initialRouteName='Screen11'>
+                    <Stack.Screen  name="HomePage" component={Screen1} />
+                    <Stack.Screen  name="Screen11" component={Screen11} options={{title:'screen 11'}}/>
                     <Stack.Screen  name="Screen2" component={Screen2}/>
                     <Stack.Screen name='LayoutScreen' component={LayoutScreen}/>
                     <Stack.Screen name="HomeScreen" component={HomeScreen}/>
