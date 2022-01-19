@@ -11,11 +11,11 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		741148C2E63356FD00D9CED3 /* libPods-MyRNProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2F63DA27E675C15A7DB4FD /* libPods-MyRNProject.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		82000463278D19840068953F /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 82000462278D19830068953F /* assets */; };
 		8299230C277160D70084BE1A /* MCRNStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8299230B277160D70084BE1A /* MCRNStorage.m */; };
 		8299231227717F1B0084BE1A /* MCRNEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8299231127717F1B0084BE1A /* MCRNEventEmitter.m */; };
-		A4B20803E85970B5547D9F98 /* libPods-MyRNProject-MyRNProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ED6E5B33193BCBB57B1B21 /* libPods-MyRNProject-MyRNProjectTests.a */; };
+		C5C2C58770166B550B4D7166 /* libPods-MyRNProject-MyRNProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C9F9C4B0192A9388166A4C /* libPods-MyRNProject-MyRNProjectTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,14 +39,15 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MyRNProject/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyRNProject/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MyRNProject/main.m; sourceTree = "<group>"; };
+		14C9F9C4B0192A9388166A4C /* libPods-MyRNProject-MyRNProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyRNProject-MyRNProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2F63DA27E675C15A7DB4FD /* libPods-MyRNProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyRNProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MyRNProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		82000462278D19830068953F /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		8299230A277160D70084BE1A /* MCRNStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCRNStorage.h; sourceTree = "<group>"; };
 		8299230B277160D70084BE1A /* MCRNStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCRNStorage.m; sourceTree = "<group>"; };
 		8299231027717F1B0084BE1A /* MCRNEventEmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCRNEventEmitter.h; sourceTree = "<group>"; };
 		8299231127717F1B0084BE1A /* MCRNEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCRNEventEmitter.m; sourceTree = "<group>"; };
 		CC992CC0E5E7C3D91446402A /* Pods-MyRNProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNProject.release.xcconfig"; path = "Target Support Files/Pods-MyRNProject/Pods-MyRNProject.release.xcconfig"; sourceTree = "<group>"; };
-		D9ED6E5B33193BCBB57B1B21 /* libPods-MyRNProject-MyRNProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyRNProject-MyRNProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85E90DFC245B517ADEED1A2 /* Pods-MyRNProject-MyRNProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNProject-MyRNProjectTests.release.xcconfig"; path = "Target Support Files/Pods-MyRNProject-MyRNProjectTests/Pods-MyRNProject-MyRNProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8C06D0B366D566CBCDFF5B4 /* Pods-MyRNProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNProject.debug.xcconfig"; path = "Target Support Files/Pods-MyRNProject/Pods-MyRNProject.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -57,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4B20803E85970B5547D9F98 /* libPods-MyRNProject-MyRNProjectTests.a in Frameworks */,
+				C5C2C58770166B550B4D7166 /* libPods-MyRNProject-MyRNProjectTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				741148C2E63356FD00D9CED3 /* libPods-MyRNProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +92,7 @@
 		13B07FAE1A68108700A75B9A /* MyRNProject */ = {
 			isa = PBXGroup;
 			children = (
+				82000462278D19830068953F /* assets */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -111,7 +112,7 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				6C2F63DA27E675C15A7DB4FD /* libPods-MyRNProject.a */,
-				D9ED6E5B33193BCBB57B1B21 /* libPods-MyRNProject-MyRNProjectTests.a */,
+				14C9F9C4B0192A9388166A4C /* libPods-MyRNProject-MyRNProjectTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,7 +211,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -252,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82000463278D19840068953F /* assets in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -442,13 +444,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0623E761C6380D7401BA63A4 /* Pods-MyRNProject-MyRNProjectTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = MyRNProjectTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,10 +472,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E85E90DFC245B517ADEED1A2 /* Pods-MyRNProject-MyRNProjectTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = MyRNProjectTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,19 +502,21 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q3ZAA58Z58;
+				DEVELOPMENT_TEAM = 2DE2XLQ6W8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MyRNProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buxiangbo.app;
 				PRODUCT_NAME = MyRNProject;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -528,18 +534,20 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q3ZAA58Z58;
+				DEVELOPMENT_TEAM = 2DE2XLQ6W8;
 				INFOPLIST_FILE = MyRNProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.buxiangbo.app;
 				PRODUCT_NAME = MyRNProject;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -551,6 +559,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -596,7 +608,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -617,6 +629,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -655,7 +671,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",

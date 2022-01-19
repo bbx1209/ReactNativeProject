@@ -32,7 +32,10 @@ interface  Props {
 
 export function MyComponentIII({ title, color='#1ACDA5' }:Props) {
     return <View>
-        <Button title={title} color={color}/>
+        <Button title={title} color={color} onPress={ ()=>{
+            console.log('new name', city, otherProperties);
+        }
+        }/>
     </View>
 }
 
@@ -44,4 +47,20 @@ export  function Counter() {
     }, [])
     return <Text style={{ fontSize:20}}> {count} </Text>
 }
+
+
+const  people = {
+    name: 'lll',
+    age:29,
+    hairColor:'f50',
+    location:{
+        city:'san'
+    }
+}
+
+const {
+    name:myName,
+    location:{city},
+    ...otherProperties
+}=people
 
